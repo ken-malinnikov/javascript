@@ -81,23 +81,26 @@ function searchNumber(array, numberToSearch) {
 
 //////////////////////////////////////////////////////////////////
 
-function average(arr) {
+function max(arr) {
 
-    sum = arr[0];
+    max = arr[0];
 
     let arrLength = arr.length;
 
     for (i = 1; i < arrLength; i++) {
-        sum += arr[i];
+
+        if (arr[i] > max) {
+            max = arr[i];
+        }
     }
 
-    return sum / arrLength;
+    return max;
 }
 
-function showAverage() {
+function showMax() {
 
-    a = [1, 2, 3];
-    avg = average(a);
+    a = [5,3,8];
+    avg = max(a);
 
     let elment = document.getElementById('result');
     elment.innerText = avg
