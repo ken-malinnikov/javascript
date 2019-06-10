@@ -53,7 +53,7 @@ function filterArray(array, from, to) {
         var nextNumber = array[i];
 
         if (nextNumber > from && nextNumber < to) {
-           result = result + nextNumber + ",";
+            result = result + nextNumber + ",";
         }
     }
 
@@ -77,3 +77,30 @@ function searchNumber(array, numberToSearch) {
 
     getElement("result3").innerText = result;
 }
+
+
+//////////////////////////////////////////////////////////////////
+
+function average(arr) {
+
+    sum = arr[0];
+
+    let arrLength = arr.length;
+
+    for (i = 1; i < arrLength; i++) {
+        sum += arr[i];
+    }
+
+    return sum / arrLength;
+}
+
+function showAverage() {
+
+    a = [1, 2, 3];
+    avg = average(a);
+
+    let elment = document.getElementById('result');
+    elment.innerText = avg
+}
+
+
